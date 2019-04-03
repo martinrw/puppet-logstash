@@ -47,6 +47,7 @@ class logstash::service {
   $settings = merge($default_settings, $logstash::settings)
   $startup_options = merge($default_startup_options, $logstash::startup_options)
   $jvm_options = $logstash::jvm_options
+  $modules = $logstash::modules
   $pipelines = $logstash::pipelines
 
   File {
